@@ -11,7 +11,7 @@
 </head>
 <body onload="initMap()">
   <div class="container">
-    <h1>Google Maps</h1>
+    <h1 class="text-center">Google Maps</h1>
     <div id="map"></div>
     <div class="form-group">
       <input type="text" name="destination" placeholder="Origin" id="origin">
@@ -19,7 +19,13 @@
     <div class="form-group">
       <input type="text" name="destination" placeholder="Destination" id="destination">
     </div>
-    <button class="btn btn-primary get-direction">Find Direction</button>
+    <button class="btn btn-primary get-direction" onclick="calcTravel()">Find Direction</button>
+    <div class="display">
+      <div id="origin-display"></div>
+      <div id="destination-display"></div>
+      <div id="time-total"></div>
+      <div id="distance-total"></div>
+    </div>
   </div>
 </body>
 </html>
