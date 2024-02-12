@@ -11,7 +11,7 @@
 </head>
 <body onload="initMap()">
   <section>
-    <div class="container my-5">
+    <div class="container my-4">
       <div class="row">
         <h1 class="col-12 text-center">Path Finder</h1>
         <div id="map"></div>
@@ -26,8 +26,10 @@
           <input class="w-100"type="text" name="destination" placeholder="Destination" id="destination">
         </div>
         <div class="container my-1">
-          <div class="row">
-            <button class="btn btn-primary col-xl-12" onclick="calcTravel()">Find Direction</button>
+          <div class="row text-center">
+            <div class="col text-center">
+              <button class="btn btn-primary col-sm-12 col-md-12" id="findBtn" onclick="calcTravel()">Find Direction</button>
+            </div>
             <div class="display col-sm-12 col-xl-12">
               <div id="origin-display"></div>
               <div id="destination-display"></div>
