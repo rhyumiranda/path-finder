@@ -4,7 +4,7 @@ let originAC,destinationAC;
 function initMap(){
   map = new google.maps.Map(document.getElementById("map"),{
     center:{lat: 14.5794,lng: 121.0359},
-    zoom: 8,
+    zoom: 10,
   });
 
   directionsService = new google.maps.DirectionsService();
@@ -42,9 +42,9 @@ function calcTravel(){
     let timeTtlDisplay = document.getElementById('time-total');
     let distanceTtlDisplay = document.getElementById('distance-total');
     
-    originDisplay.textContent = document.getElementById('origin').value;
-    destinationDisplay.textContent = document.getElementById('destination').value;
-    timeTtlDisplay.textContent = result.routes[0].legs[0].duration.text;
-    distanceTtlDisplay.textContent = result.routes[0].legs[0].distance.text;
+    originDisplay.textContent = `From: ${document.getElementById('origin').value}`;
+    destinationDisplay.textContent = `To: ${document.getElementById('destination').value}`;
+    timeTtlDisplay.textContent = `It would take ${result.routes[0].legs[0].duration.text}`;
+    distanceTtlDisplay.textContent = `The distance would be ${result.routes[0].legs[0].distance.text}`;
   });
 }
